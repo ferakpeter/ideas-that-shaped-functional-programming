@@ -1,0 +1,173 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Ideas that shaped Functional Programming
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+
+      section
+        h1 Ideas that shaped Functional Programming
+        h3
+          a(href='https://twitter.com/ferakpeter') @ferakpeter
+        img.avatar(src='images/profile.png')
+
+      section
+        img.avatar(src='images/codinghorror.png')
+        br
+        blockquote.
+          Any application that <strong>can</strong> be written in JavaScript <strong>will</strong> eventually be written in JavaScript.
+        br
+        p
+          a(href='https://twitter.com/codinghorror') Jeff Atwood
+
+      section
+        h2 Status Quo
+        ul
+          li Languages are going meta
+          li Not restricted to the platform they will run on
+          li Static Typing is very useful
+          li Developer Experience and tooling
+
+      section
+        h2 Let's branch into a different domain
+        img.img--med(src='images/music.jpg')
+
+      section
+        h2 Where are the similarities?
+        ul
+          li Fast paced, constantly changing
+          li Trends matter
+          li "Open-source"
+          li Highly dependend on "hardware"
+          li Usually performed by groups of individuals with different skill-sets
+
+      section
+        h2 How is music taught?
+
+      section
+        img.img--full(src='images/music-teaching1.jpg')
+
+      section
+        img.img--full(src='images/radio.jpg')
+
+      section
+        h2 How does music evolve?
+
+      section
+        img.img--full(src='images/music-styles.jpg')
+
+      section
+        ul
+          li Great ideas in music spread wildfire and influence others
+          li Changes are incremental and usually small
+          li But sometimes there are game-changers
+
+      section
+        img.img--med(src='images/electric-guitar.jpg')
+
+      section
+        h2 The electric guitar changed everything
+        ul
+          li But did it really?
+          li Melodies are still melodies
+          li F# is still F#
+          li The foundations of music are the same
+          li But people found new ways of expressing themselves musically
+          li The electric guitar opened the door to new ideas
+
+      section
+        h2 And that's really similar to some inventions in Tech
+        ul
+          li The cloud didn't re-invent computing
+          li But it gave us new ways to scale applications
+
+      section
+        h2 Learning from Mozart?
+        ul
+          li A modern musician doesn't need the same skill as a classical composer
+          li But a modern musician can learn from the way Mozart problem solved
+          li How did he use melody, how did he build up tension, etc.
+
+      section
+        h2 Classical conductors of Mathematics
+        ul 18th century
+          li Euler
+        ul 19th century
+          li Gauss
+          li Fregge
+          li Cantor
+        ul 20th century
+          li Hilbert
+          li Gödel
+          li Church
+          li Turing
+
+
+      section
+        h2 Kaiser
+        img.img--small(src='images/kaiser.png')
+
+      section
+        img.avatar.avatar--small(src='images/kaiser.png')
+        ul
+          li Kaiser
+          li ... and Computer?
+
+      section
+        quote
+          i.fa.fa-quote-left
+          .text
+            | instead of pretending everything is a local function even over the network (which turned out to be a bad idea), what if we did it the other way around? Pretend your components are communicating over a network even when they aren't.
+          a Solomon Hykes - @solomonstre
+
+      section
+        h2 David Hilbert
+        img.img--small(src='images/hilbert.png')
+
+      section
+        img.avatar.avatar--small(src='images/hilbert.png')
+        ul
+          li Formal definition of an algorithm?
+          li Interested in the foundation of mathematics
+          li Logic is complete
+          li Entscheidungsproblem
+
+      section
+        h2 Responsive Slides
+        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
+
+      section
+        h2 Bullet List
+        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
+        ul
+          li Bullet 1
+          li Bullet 2
+          li Bullet 3
+
+      section
+        h2 Reality
+        pre
+          code.language-javascript.
+            var ret = '';
+
+            ret = project.namespace + '.' + project.repository;
+            ret += (project.subfolder === undefined
+              || project.subfolder=='') ? '' : '.' + project.subfolder;
+            ret += '.' + project.branch.replace(/\//g, '_');
+            ret += (pipelineName === undefined) ? '' : '.' + pipelineName;
+
+            return ret;
+
+      section
+        h1 Thank you!
+        h3
+          a(href='https://twitter.com/ferakpeter') @ferakpeter
+        img.avatar.avatar--small(src='images/profile.png')
+
+    script(src='build/build.js')
