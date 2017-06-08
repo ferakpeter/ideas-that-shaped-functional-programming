@@ -27,7 +27,7 @@ html
           a(href='https://twitter.com/codinghorror') Jeff Atwood
 
       section
-        h2 Status Quo
+        h2 Fast forward
         ul
           li Languages are going meta
           li Not restricted to the platform they will run on
@@ -64,38 +64,81 @@ html
 
       section
         ul
-          li Great ideas in music spread wildfire and influence others
+          li Musical ideas spread through communities, influence each others
           li Changes are incremental and usually small
-          li But sometimes there are game-changers
+          li But sometimes there are game-changers (paradigm-shifts)
 
       section
         img.img--med(src='images/electric-guitar.jpg')
 
       section
         h2 The electric guitar changed everything
-        ul
-          li But did it really?
-          li Melodies are still melodies
-          li F# is still F#
-          li The foundations of music are the same
-          li But people found new ways of expressing themselves musically
-          li The electric guitar opened the door to new ideas
 
       section
-        h2 And that's really similar to some inventions in Tech
-        ul
-          li The cloud didn't re-invent computing
-          li But it gave us new ways to scale applications
+        h1 Paradigm shifts in Tech
 
       section
-        h2 Learning from Mozart?
-        ul
-          li A modern musician doesn't need the same skill as a classical composer
-          li But a modern musician can learn from the way Mozart problem solved
-          li How did he use melody, how did he build up tension, etc.
+        h2 Backend
 
       section
-        h2 Classical conductors of Mathematics
+        h2 Cloud was a new way to scale the backend
+        img.img--med(src='images/horizontal-vs-vertical-scaling-vertical-and-horizontal-scaling-explained-diagram.png')
+
+      section
+        h2 Summary
+        ul
+          li Java and JVM better at squeezing all the juice out of a box
+          li Functional paradigm better for stateless services
+
+      section
+        h2 Frontend
+
+      section
+        img.img--full(src='images/desktop-frontends.png')
+
+      section
+        img.img--full(src='images/web-frontend.jpg')
+
+      section
+        img.img--full(src='images/mobile-apps.jpg')
+
+      section
+        h2 Summary
+        ul
+          li Devices (Desktop to Web to Mobile)
+          li Space
+          li UX
+          li Product design more integrated with dev teams
+          li Less clutter and smaller applications
+          li That serve specific use-cases
+          li State can be distributed between applications (Google Docs)
+
+      section
+        h2 Both OOP and FP are designed to manage state in smaller chunks, where is the difference?
+
+      section
+        h2 OOP concepts are easier to misuse than FP
+        ul
+          li If objects are supposed to mutate each other with messages, why is this possible?
+        pre
+          code.language-javascript.
+            var ret = '';
+            ret = project.namespace + '.' + project.repository;
+            ret += (project.subfolder === undefined
+              || project.subfolder=='') ? '' : '.' + project.subfolder;
+            ret += '.' + project.branch.replace(/\//g, '_');
+            ret += (pipelineName === undefined) ? '' : '.' + pipelineName;
+            return ret;
+
+      section
+        h2 As programmers we are like divers
+
+      section
+        h2 Readability is a big deal
+
+
+      section
+        h2 Influential people in Mathematics
         ul 18th century
           li Euler
         ul 19th century
@@ -108,61 +151,23 @@ html
           li Church
           li Turing
 
-
       section
-        h2 Kaiser
-        img.img--small(src='images/kaiser.png')
-
-      section
-        img.avatar.avatar--small(src='images/kaiser.png')
+        img.avatar.avatar--med(src='images/kaiser.png')
         ul
           li Kaiser
           li ... and Computer?
 
       section
-        quote
-          i.fa.fa-quote-left
-          .text
-            | instead of pretending everything is a local function even over the network (which turned out to be a bad idea), what if we did it the other way around? Pretend your components are communicating over a network even when they aren't.
-          a Solomon Hykes - @solomonstre
-
-      section
         h2 David Hilbert
-        img.img--small(src='images/hilbert.png')
-
-      section
-        img.avatar.avatar--small(src='images/hilbert.png')
+        img.avatar.avatar--med(src='images/hilbert.png')
         ul
           li Formal definition of an algorithm?
           li Interested in the foundation of mathematics
           li Logic is complete
           li Entscheidungsproblem
 
-      section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
 
-      section
-        h2 Bullet List
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-        ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
 
-      section
-        h2 Reality
-        pre
-          code.language-javascript.
-            var ret = '';
-
-            ret = project.namespace + '.' + project.repository;
-            ret += (project.subfolder === undefined
-              || project.subfolder=='') ? '' : '.' + project.subfolder;
-            ret += '.' + project.branch.replace(/\//g, '_');
-            ret += (pipelineName === undefined) ? '' : '.' + pipelineName;
-
-            return ret;
 
       section
         h1 Thank you!
