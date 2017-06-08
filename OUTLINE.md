@@ -18,5 +18,14 @@ That looks familiar, right? When we make a new program we almost always start fr
 
 Music and programming are not the same subject-matter. But I would argue that there are some parallels, especially when it comes to how we teach and learn it. And both Music and programming are very fast changing fields. Someone is doing something new all the time, but both are based on a set of rules that never change. In music the scales and rythmic rules are the same for all kinds of music. In programming our rules were discovered by Mathematicians already before there machines.
 
+## Infrastructure revolution - scaling horizontally
+
+
+
+Each paradigm supports a set of concepts that makes it the best for a certain kind of problem. - Peter Van Roy
+
+
+
+
 ## Turn of the century
 The Kaiser
