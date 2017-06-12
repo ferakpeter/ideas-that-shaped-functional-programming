@@ -185,8 +185,7 @@ html
 
       section
         img.img--full(src='images/programming-paradigms.jpg')
-        p
-          Peter Van Roy
+        Peter Van Roy
 
       section
         h2 Programming Paradigms
@@ -195,20 +194,20 @@ html
           li Both are an answer to imperative procedural languages (GOTO:)
 
       section
-        h2 Summary
+        h2 Programming Paradigms
         h3 Object Oriented
         ul
           li Better at context
           li Less reusable for new contexts
-          li Very flexible (good and bad)
+          li Very flexible and open
           li Needs to be managed with patterns
 
         h3 Functional
         ul
-          li Better at generics
+          li Functions are generic building blocks
           li Context needs to be managed
           li More reusable smaller chunks
-          li More rigid, built in patterns
+          li More rigid, built-in patterns
 
       section
         h2 As programmers we are like divers
@@ -240,8 +239,32 @@ html
         img.img--med(src='images/functions.png')
 
       section
-        h2 First-order logic
+        h2 First-order logic (expressed in Prolog)
+        pre
+          code.language-javascript.
+            person(alan)
+            person(grace)
+            person(david)
+            person(margaret)
 
+            => person(turingmachine)
+            > false.
+            => person(alan)
+            > true.
+
+            father(alan, david)
+            father(alan, margaret)
+            mother(grace, david)
+            mother(grace, margaret)
+
+            sibling(X, Y) :-
+              X \= Y,
+              parent(P, X),
+              parent(P, Y).
+
+            => sibling(X, david)
+            > X = david ;
+              X = margaret ;
 
       section
         h2 Kaiser
@@ -261,13 +284,16 @@ html
         h2 Kurt Gödel
         img.avatar.avatar--med(src='images/goedel.png')
         ul
-          li Logic is not complete - “This statement is not provable”
+          li Logic is not complete
           li Incompleteness theorems (1931)
           li Prove that Hilbert's definition of Algorithm was not valid
 
       section
-      h2 Prolog code
-      pre
+        h2 Logic is not a complete system
+        ul
+          li “This statement is not provable” written in arithmetic means that there is a valid expression that cannot be proven to be computable
+          li In other words if you had a computer with infinate CPU and RAM, there will be calculation that will not compute
+          li But it also means that a sub-system can be complete
 
       section
         h2 Alonzo Church
@@ -340,16 +366,21 @@ html
         h2 Writing a program within a system like Lambda-Calculus proves that it will compute.
 
       section
+        h2 Hardware evolution
+        img.img--full(src='images/computer-hardware-evolution.jpg')
+        a(href='https://s-media-cache-ak0.pinimg.com/736x/a7/fd/24/a7fd245247f84d867fc9707bb6fbb430.jpg') source
+
+      section
         h2 OOP vs. FP
 
       section
-        img.avatar(src='images/anjana-vakil.jpg')
+        img.avatar.avatar--med(src='images/anjana-vakil.jpg')
         br
         blockquote.
           Programming Across Paradigms
         br
         p
-          a(href='https://twitter.com/AnjanaVakil') @AnjanaVakil
+          a(href='https://youtu.be/Pg3UeB-5FdA') Anjana Vakil
 
       section
         h2 OOP like cells
@@ -360,13 +391,20 @@ html
         img.img--med(src='images/factory.jpg')
 
       section
-        img.avatar(src='images/profile.png')
-        br
-        blockquote.
-          Taking that picture further
-        br
-        p
-          a(href='https://twitter.com/ferakpeter') @ferakpeter
+        h2 Programming Paradigms
+        h3 Object Oriented
+        ul
+          li Better at context
+          li Less reusable for new contexts
+          li Very flexible and open
+          li Needs to be managed with patterns
+
+        h3 Functional
+        ul
+          li Functions are generic building blocks
+          li Context needs to be managed
+          li More reusable smaller chunks
+          li More rigid, built-in patterns
 
       section
         h2 OOP like a car
@@ -385,10 +423,27 @@ html
 
       section
         h2 ...or creating new paradigms
+        img.avatar(src='images/david-nolen.jpg')
+        br
+        blockquote.
+          Idée Fixe
+        br
+        p
+          a(href='https://www.youtube.com/watch?v=lzXHMy4ewtM') David Nolen
 
       section
-        h2 React to paradigm shifts
+        h2 Learning to work with new Paradigms enhances our toolbox!
+
+      section
+        h2 ...and helps reacting to big ideas
         img.img--med(src='images/electric-guitar.jpg')
+
+      section
+        h2 Follow hardware innovation
+        img.img--full(src='images/evolution-of-cloud.jpg')
+
+      section
+        h1 What will be the next game changer?
 
       section
         h2 How will applications evolve?
@@ -422,7 +477,14 @@ html
         h3 Frontend
         ul
           li Great adition to Javascript
+          li Adds to the ideas of React
           li Lots of room to grow
+
+      section
+        h2 btw... you don't need to be an electrical engineer to write a hit-song...
+
+      section
+        h2 but it doesn't hurt to get to know your instruments better!
 
       section
         h1 Thank you!
