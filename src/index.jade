@@ -217,33 +217,15 @@ html
         h2 Context is also a big deal
 
       section
-        h2 But stable building blocks for the application are more important
+        h2 Reusable stable building blocks?
 
       section
-        h2 Stable building blocks in Mathematics are Axioms
+        h1 Mathematics is different...
 
       section
-        h1 Math
-
-      section
-        h2 18th century
-        ul
-          li Euler
-      section
-        h2 19th century
-        ul
-          li Gauss
-          li Fregge
-          li Cantor
-      section
-        h2 20th century
-        ul
-          li Hilbert
-          li Gödel
-          li Church
-          li Turing
-          li Curry
-          
+        pre
+          code.language-javascript.
+            N + 1
 
       section
         img.avatar.avatar--med(src='images/kaiser.png')
@@ -255,11 +237,98 @@ html
         h2 David Hilbert
         img.avatar.avatar--med(src='images/hilbert.png')
         ul
-          li Formal definition of an algorithm?
           li Interested in the foundation of mathematics
-          li Logic is complete
+          li Formal definition of an algorithm?
           li Entscheidungsproblem
 
+      section
+        h2 Kurt Gödel
+        img.avatar.avatar--med(src='images/goedel.png')
+        ul
+          li Logic is not complete - “This statement is not provable”
+          li Incompleteness theorems (1931)
+          li We need a new formal definition of Algorithm
+
+      section
+        h2 Alonzo Church
+        img.avatar.avatar--med(src='images/church.png')
+        ul
+          li Lambda Calculus an attempt to formally define Algorithm
+          li Gödel defines recursive functions
+          li Church proves they are equivalent to Lambda Calculus
+
+      section
+        h2 Alan Turing
+        img.avatar.avatar--med(src='images/turing.png')
+        ul
+          li Turing settled the dispute
+          li Church-Turing incompleteness thesis
+          li 3 equivalent formal definitions of an algorithm: Church, Gödel, Turing
+
+      section
+        h2 Haskell Curry
+        img.avatar.avatar--med(src='images/curry.png')
+        ul
+          li Curry–Howard correspondence
+          li Curry–Howard isomorphism or equivalence
+          li proofs-as-programs and propositions- or formulae-as-types interpretation
+
+
+      section
+        h2 Basics of set theory
+        pre
+          code.language-haskell.
+            r :: [a] → [a]
+
+      section
+        img.img--med(src='images/functions.png')
+
+      section
+        img.img--med(src='images/functions2.png')
+
+    section
+        h2 18th century
+        ul
+          li Euler
+
+      section
+        h2 19th century
+        ul
+          li Gauss
+          li Fregge
+          li Cantor
+
+      section
+        h2 20th century
+        ul
+          li Hilbert
+          li Gödel
+          li Church
+          li Turing
+          li Curry
+
+    section
+      h1 Looking ahead
+
+    section
+      h2 Cloud is turning into smaller chunks
+        ul
+          li Cold starts
+          li startup time
+          li In a bigger sense the Infrastructure is getting more abstract
+          li Can't just login to the server instance and change things
+
+    section
+      h2 OOP vs. FP
+      h2 OOP like building a car
+      h2 FP like building a traing
+
+    section
+      h2 Challenges ahead
+      ul
+        li Logging & Tracing (Context a.k.a cryptic error messages)
+        li "Lean" Application chunks
+        li
 
 
 
