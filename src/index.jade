@@ -31,7 +31,7 @@ html
         ul
           li Languages are going meta
           li Not restricted to the platform they will run on
-          li Static Typing is very useful
+          li Static Typing is very useful, especially for large applications
           li Developer Experience and tooling
 
       section
@@ -64,7 +64,7 @@ html
 
       section
         ul
-          li Musical ideas spread through communities, influence each others
+          li Musical ideas spread through communities, communities influence each others
           li Changes are incremental and usually small
           li But sometimes there are game-changers (paradigm-shifts)
 
@@ -75,46 +75,7 @@ html
         h2 The electric guitar changed everything
 
       section
-        h2 Did something like that happen in Tech?
-
-      section
-        h2 Backend
-
-      section
-        h2 Cloud was a new way to scale the backend
-        img.img--med(src='images/horizontal-vs-vertical-scaling-vertical-and-horizontal-scaling-explained-diagram.png')
-
-      section
-        h2 Summary
-        ul
-          li Java and JVM better at squeezing all the juice out of a box
-          li Functional paradigm better for stateless services
-
-      section
-        h2 Frontend
-
-      section
-        img.img--full(src='images/desktop-frontends.png')
-
-      section
-        img.img--full(src='images/web-frontend.jpg')
-
-      section
-        img.img--full(src='images/mobile-apps.jpg')
-
-      section
-        h2 Summary
-        ul
-          li Devices (Desktop to Web to Mobile)
-          li Space
-          li UX
-          li Product design more integrated with dev teams
-          li Less clutter and smaller applications
-          li That serve specific use-cases
-          li State can be distributed between applications
-
-      section
-        h2 Programming languages
+        h2 Back to Programming languages
 
       section
         h2 1950's & 60's
@@ -167,16 +128,7 @@ html
           li ReasonML
 
       section
-        img.img--full(src='images/programming-paradigms.jpg')
-
-      section
-        h2 Summary
-        ul
-          li Both OOP and FP are designed to manage state in smaller chunks
-          li Both are an answer to imperative procedural languages (GOTO:)
-
-      section
-        h2 So what are the differences?
+        h2 OOP vs. FP
 
       section
         h2 OOP concepts are easier to misuse than FP
@@ -196,16 +148,67 @@ html
         a(href='https://github.com/ferakpeter/nodejs-functional-example') example
 
       section
+        h2 Backend
+
+      section
+        h2 Cloud was a new way to scale the backend
+        img.img--med(src='images/horizontal-vs-vertical-scaling-vertical-and-horizontal-scaling-explained-diagram.png')
+
+      section
+        h2 Backend
+        ul
+          li Java and JVM better at squeezing all the juice out of a box
+          li Functional paradigm better for stateless services
+
+      section
+        h2 Frontend
+
+      section
+        img.img--full(src='images/desktop-frontends.png')
+
+      section
+        img.img--full(src='images/web-frontend.jpg')
+
+      section
+        img.img--full(src='images/mobile-apps.jpg')
+
+      section
+        h2 Frontend
+        ul
+          li Devices (Desktop to Web to Mobile)
+          li Space
+          li UX
+          li Product design more integrated with dev teams
+          li Less clutter and smaller applications
+          li That serve specific use-cases
+          li State can be distributed between applications
+
+      section
+        img.img--full(src='images/programming-paradigms.jpg')
+        p
+          Peter Van Roy
+
+      section
+        h2 Programming Paradigms
+        ul
+          li Both OOP and FP are designed to manage state in smaller chunks
+          li Both are an answer to imperative procedural languages (GOTO:)
+
+      section
         h2 Summary
-        ul Object Oriented
+        h3 Object Oriented
+        ul
           li Better at context
           li Less reusable for new contexts
-          li Easier to misuse
+          li Very flexible (good and bad)
+          li Needs to be managed with patterns
 
-        ul Functional
+        h3 Functional
+        ul
           li Better at generics
           li Context needs to be managed
           li More reusable smaller chunks
+          li More rigid, built in patterns
 
       section
         h2 As programmers we are like divers
@@ -228,18 +231,31 @@ html
             N + 1
 
       section
+        h2 Basics of set theory
+        pre
+          code.language-haskell.
+            r :: [a] → [a]
+
+      section
+        img.img--med(src='images/functions.png')
+
+      section
+        h2 First-order logic
+
+
+      section
+        h2 Kaiser
         img.avatar.avatar--med(src='images/kaiser.png')
         ul
-          li Kaiser
           li ... and Computer?
 
       section
         h2 David Hilbert
         img.avatar.avatar--med(src='images/hilbert.png')
         ul
-          li Interested in the foundation of mathematics
+          li Studied foundation of mathematics
           li Formal definition of an algorithm?
-          li Entscheidungsproblem
+          li Entscheidungsproblem (the halting problem)
 
       section
         h2 Kurt Gödel
@@ -247,7 +263,11 @@ html
         ul
           li Logic is not complete - “This statement is not provable”
           li Incompleteness theorems (1931)
-          li We need a new formal definition of Algorithm
+          li Prove that Hilbert's definition of Algorithm was not valid
+
+      section
+      h2 Prolog code
+      pre
 
       section
         h2 Alonzo Church
@@ -258,12 +278,46 @@ html
           li Church proves they are equivalent to Lambda Calculus
 
       section
+        img.img--med(src='images/typed-lambda-calculus.png')
+
+      section
+        h2 Typed Lambda Calculus
+        pre
+          code.language-javascript.
+            const TWO  = (f) => { return (v) => { return f(f(v)) }}
+
+            // WAT.....
+            const DECREMENT = (n) => {
+              return (f) => { return (x) => {
+                return n((g) => { return (h) => 
+                { return h(g(f))}})((y) => { return x})((y) => { return y })
+              }}
+            }
+
+
+            function toInt(x) {
+              return x((v) => { return v + 1 })(0)
+            }
+
+            console.log(toInt(DECREMENT(TWO)))
+
+            // next - multiply
+        a(href='https://github.com/newportandy/lambda_example_code/blob/master/js/300-lambda.js') Andy Newport
+
+      section
         h2 Alan Turing
         img.avatar.avatar--med(src='images/turing.png')
         ul
           li Turing settled the dispute
           li Church-Turing incompleteness thesis
           li 3 equivalent formal definitions of an algorithm: Church, Gödel, Turing
+
+      section
+        h2 Turing Machine & Turing completeness
+        ul
+          li Finite State Machines
+          li With a tape
+          li Turing Machine can operate on a program (another Turing Machine)
 
       section
         h2 Haskell Curry
@@ -273,64 +327,102 @@ html
           li Curry–Howard isomorphism or equivalence
           li proofs-as-programs and propositions- or formulae-as-types interpretation
 
+      section
+        blockquote.
+          Under the isomorphism, types correspond
+          to propositions and members of those types, like pairs, functions and so
+          on, to proofs.
+        br
+        p
+          a(href='https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/ttfp.pdf') Simon Thomson
 
       section
-        h2 Basics of set theory
-        pre
-          code.language-haskell.
-            r :: [a] → [a]
+        h2 Writing a program within a system like Lambda-Calculus proves that it will compute.
 
       section
-        img.img--med(src='images/functions.png')
+        h2 OOP vs. FP
 
       section
-        img.img--med(src='images/functions2.png')
+        img.avatar(src='images/anjana-vakil.jpg')
+        br
+        blockquote.
+          Programming Across Paradigms
+        br
+        p
+          a(href='https://twitter.com/AnjanaVakil') @AnjanaVakil
 
-    section
-        h2 18th century
+      section
+        h2 OOP like cells
+        img.img--med(src='images/cells.jpg')
+
+      section
+        h2 FP like a factory
+        img.img--med(src='images/factory.jpg')
+
+      section
+        img.avatar(src='images/profile.png')
+        br
+        blockquote.
+          Taking that picture further
+        br
+        p
+          a(href='https://twitter.com/ferakpeter') @ferakpeter
+
+      section
+        h2 OOP like a car
+        img.img--med(src='images/car.jpg')
+
+      section
+        h2 FP like a train
+        img.img--med(src='images/train.jpg')
+
+      section
+        h2 What options are available to us?
+
+      section
+        h2 Combining more paradigms
+        img.img--small(src='images/programming-paradigms.jpg')
+
+      section
+        h2 ...or creating new paradigms
+
+      section
+        h2 React to paradigm shifts
+        img.img--med(src='images/electric-guitar.jpg')
+
+      section
+        h2 How will applications evolve?
         ul
-          li Euler
+          li Logging & Tracing (cryptic error messages)
+          li "Lean" Application chunks instead of big frameworks (Tree-shaking)
+          li Managing single points of failure (outsorced to the cloud)
 
       section
-        h2 19th century
+        h2 How will Infrastructure evolve?
         ul
-          li Gauss
-          li Fregge
-          li Cantor
-
-      section
-        h2 20th century
-        ul
-          li Hilbert
-          li Gödel
-          li Church
-          li Turing
-          li Curry
-
-    section
-      h1 Looking ahead
-
-    section
-      h2 Cloud is turning into smaller chunks
-        ul
+          li In a sense Infrastructure is getting more abstract
+          li Scaling managed by the cloud
           li Cold starts
-          li startup time
-          li In a bigger sense the Infrastructure is getting more abstract
-          li Can't just login to the server instance and change things
+          li Startup time
+          li etc...
 
-    section
-      h2 OOP vs. FP
-      h2 OOP like building a car
-      h2 FP like building a traing
+      section
+        h2 What can ReasonML offer?
 
-    section
-      h2 Challenges ahead
-      ul
-        li Logging & Tracing (Context a.k.a cryptic error messages)
-        li "Lean" Application chunks
-        li
+      section
+        h2 ReasonML
+        h3 Backend
+        ul
+          li Powerful compiler
+          li Going closer to native
+          li MirageOS
+          li No more need for VM (JVM, Node, etc)
+          li Functional by default, but not "closed"
 
-
+        h3 Frontend
+        ul
+          li Great adition to Javascript
+          li Lots of room to grow
 
       section
         h1 Thank you!
@@ -338,4 +430,4 @@ html
           a(href='https://twitter.com/ferakpeter') @ferakpeter
         img.avatar.avatar--small(src='images/profile.png')
 
-    script(src='build/build.js')
+      script(src='build/build.js')
