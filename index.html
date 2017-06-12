@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ideas that shaped Functional Programming</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Ideas that shaped Functional Programming</h1>
+        <h3><a href="https://twitter.com/ferakpeter">@ferakpeter</a></h3><img src="images/profile.png" class="avatar">
+      </section>
+      <section><img src="images/codinghorror.png" class="avatar"><br>
+        <blockquote>Any application that <strong>can</strong> be written in JavaScript <strong>will</strong> eventually be written in JavaScript.</blockquote><br>
+        <p><a href="https://twitter.com/codinghorror">Jeff Atwood</a></p>
+      </section>
+      <section>
+        <h2>Fast forward</h2>
+        <ul>
+          <li>Languages are going meta</li>
+          <li>Not restricted to the platform they will run on</li>
+          <li>Static Typing is very useful, especially for large applications</li>
+          <li>Developer Experience and tooling</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Let's branch into a different domain</h2><img src="images/music.jpg" class="img--med">
+      </section>
+      <section>
+        <h2>Where are the similarities?</h2>
+        <ul>
+          <li>Fast paced, constantly changing</li>
+          <li>Trends matter</li>
+          <li>"Open-source"</li>
+          <li>Highly dependend on "hardware"</li>
+          <li>Usually performed by groups of individuals with different skill-sets</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How is music taught?</h2>
+      </section>
+      <section><img src="images/music-teaching1.jpg" class="img--full"></section>
+      <section><img src="images/radio.jpg" class="img--full"></section>
+      <section>
+        <h2>Music evolves all the time...</h2>
+      </section>
+      <section><img src="images/music-styles.jpg" class="img--full"></section>
+      <section>
+        <ul>
+          <li>Musical ideas spread through communities, communities influence each others</li>
+          <li>Changes are incremental and usually small</li>
+          <li>But sometimes there are game-changers (paradigm-shifts)</li>
+        </ul>
+      </section>
+      <section><img src="images/electric-guitar.jpg" class="img--med"></section>
+      <section>
+        <h2>The electric guitar changed everything</h2>
+      </section>
+      <section>
+        <h2>Back to Programming languages</h2>
+      </section>
+      <section>
+        <h2>1950's & 60's</h2>
+        <ul>
+          <li>FORTRAN</li>
+          <li>LISP</li>
+          <li>COBOL</li>
+          <li>BASIC</li>
+        </ul>
+      </section>
+      <section>
+        <h2>1970's</h2>
+        <ul>
+          <li>Pascal</li>
+          <li>C</li>
+          <li>Smalltalk</li>
+          <li>ML</li>
+        </ul>
+      </section>
+      <section>
+        <h2>1980's</h2>
+        <ul>
+          <li>C++</li>
+          <li>Common Lisp</li>
+          <li>Erlang</li>
+          <li>Perl</li>
+        </ul>
+      </section>
+      <section>
+        <h2>1990's</h2>
+        <ul>
+          <li>Haskell</li>
+          <li>Python</li>
+          <li>Ruby</li>
+          <li>JS</li>
+          <li>PHP</li>
+        </ul>
+      </section>
+      <section>
+        <h2>2000's</h2>
+        <ul>
+          <li>C#</li>
+          <li>Scala</li>
+          <li>F#</li>
+          <li>Clojure</li>
+          <li>Go</li>
+        </ul>
+      </section>
+      <section>
+        <h2>2010's</h2>
+        <ul>
+          <li>Rust</li>
+          <li>Dart</li>
+          <li>Kotlin</li>
+          <li>ReasonML</li>
+        </ul>
+      </section>
+      <section>
+        <h2>OOP vs. FP</h2>
+      </section>
+      <section>
+        <h2>OOP concepts are easier to misuse than FP</h2>
+        <ul>
+          <li>If objects are supposed to mutate each other with messages, why is this possible?</li>
+        </ul>
+        <pre><code class="language-javascript">var ret = '';
+ret = project.namespace + '.' + project.repository;
+ret += (project.subfolder === undefined
+  || project.subfolder=='') ? '' : '.' + project.subfolder;
+ret += '.' + project.branch.replace(/\//g, '_');
+ret += (pipelineName === undefined) ? '' : '.' + pipelineName;
+return ret;
+</code></pre>
+      </section>
+      <section><a href="https://github.com/ferakpeter/nodejs-functional-example">example</a></section>
+      <section>
+        <h2>Backend</h2>
+      </section>
+      <section>
+        <h2>Cloud was a new way to scale the backend</h2><img src="images/horizontal-vs-vertical-scaling-vertical-and-horizontal-scaling-explained-diagram.png" class="img--med">
+      </section>
+      <section>
+        <h2>Backend</h2>
+        <ul>
+          <li>Java and JVM better at squeezing all the juice out of a box</li>
+          <li>Functional paradigm better for stateless services</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Frontend</h2>
+      </section>
+      <section><img src="images/desktop-frontends.png" class="img--full"></section>
+      <section><img src="images/web-frontend.jpg" class="img--full"></section>
+      <section><img src="images/mobile-apps.jpg" class="img--full"></section>
+      <section>
+        <h2>Frontend</h2>
+        <ul>
+          <li>Devices (Desktop to Web to Mobile)</li>
+          <li>Space</li>
+          <li>UX</li>
+          <li>Product design more integrated with dev teams</li>
+          <li>Less clutter and smaller applications</li>
+          <li>That serve specific use-cases</li>
+          <li>State can be distributed between applications</li>
+        </ul>
+      </section>
+      <section><img src="images/programming-paradigms.jpg" class="img--full">
+        <Peter>Van Roy</Peter>
+      </section>
+      <section>
+        <h2>Programming Paradigms</h2>
+        <ul>
+          <li>Both OOP and FP are designed to manage state in smaller chunks</li>
+          <li>Both are an answer to imperative procedural languages (GOTO:)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Programming Paradigms</h2>
+        <h3>Object Oriented</h3>
+        <ul>
+          <li>Better at context</li>
+          <li>Less reusable for new contexts</li>
+          <li>Very flexible and open</li>
+          <li>Needs to be managed with patterns</li>
+        </ul>
+        <h3>Functional</h3>
+        <ul>
+          <li>Functions are generic building blocks</li>
+          <li>Context needs to be managed</li>
+          <li>More reusable smaller chunks</li>
+          <li>More rigid, built-in patterns</li>
+        </ul>
+      </section>
+      <section>
+        <h2>As programmers we are like divers</h2>
+      </section>
+      <section>
+        <h2>Readability is a big deal</h2>
+      </section>
+      <section>
+        <h2>Context is also a big deal</h2>
+      </section>
+      <section>
+        <h2>Reusable stable building blocks?</h2>
+      </section>
+      <section>
+        <h1>Mathematics is different...</h1>
+      </section>
+      <section>
+        <pre><code class="language-javascript">N + 1
+</code></pre>
+      </section>
+      <section>
+        <h2>Basics of set theory</h2>
+        <pre><code class="language-haskell">r :: [a] → [a]
+</code></pre>
+      </section>
+      <section><img src="images/functions.png" class="img--med"></section>
+      <section>
+        <h2>First-order logic (expressed in Prolog)</h2>
+        <pre><code class="language-javascript">person(alan)
+person(grace)
+person(david)
+person(margaret)
+
+=> person(turingmachine)
+> false.
+=> person(alan)
+> true.
+
+father(alan, david)
+father(alan, margaret)
+mother(grace, david)
+mother(grace, margaret)
+
+sibling(X, Y) :-
+  X \= Y,
+  parent(P, X),
+  parent(P, Y).
+  
+=> sibling(X, david)
+> X = david ;
+  X = margaret ;
+  </code></pre>
+      </section>
+      <section>
+        <h2>Kaiser</h2><img src="images/kaiser.png" class="avatar avatar--med">
+        <ul>
+          <li>... and Computer?</li>
+        </ul>
+      </section>
+      <section>
+        <h2>David Hilbert</h2><img src="images/hilbert.png" class="avatar avatar--med">
+        <ul>
+          <li>Studied foundation of mathematics</li>
+          <li>Formal definition of an algorithm?</li>
+          <li>Entscheidungsproblem (the halting problem)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Kurt Gödel</h2><img src="images/goedel.png" class="avatar avatar--med">
+        <ul>
+          <li>Logic is not complete</li>
+          <li>Incompleteness theorems (1931)</li>
+          <li>Prove that Hilbert's definition of Algorithm was not valid</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Logic is not a complete system</h2>
+        <ul>
+          <li>“This statement is not provable” written in arithmetic means that there is a valid expression that cannot be proven to be computable</li>
+          <li>In other words if you had a computer with infinate CPU and RAM, there will be calculation that will not compute</li>
+          <li>But it also means that a sub-system can be complete</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Alonzo Church</h2><img src="images/church.png" class="avatar avatar--med">
+        <ul>
+          <li>Lambda Calculus an attempt to formally define Algorithm</li>
+          <li>Gödel defines recursive functions</li>
+          <li>Church proves they are equivalent to Lambda Calculus</li>
+        </ul>
+      </section>
+      <section><img src="images/typed-lambda-calculus.png" class="img--med"></section>
+      <section>
+        <h2>Typed Lambda Calculus</h2>
+        <pre><code class="language-javascript">const TWO  = (f) => { return (v) => { return f(f(v)) }}
+
+// WAT.....
+const DECREMENT = (n) => {
+  return (f) => { return (x) => {
+    return n((g) => { return (h) => 
+    { return h(g(f))}})((y) => { return x})((y) => { return y })
+  }}
+}
+
+
+function toInt(x) {
+  return x((v) => { return v + 1 })(0)
+}
+
+console.log(toInt(DECREMENT(TWO)))
+
+// next - multiply</code></pre><a href="https://github.com/newportandy/lambda_example_code/blob/master/js/300-lambda.js">Andy Newport</a>
+      </section>
+      <section>
+        <h2>Alan Turing</h2><img src="images/turing.png" class="avatar avatar--med">
+        <ul>
+          <li>Turing settled the dispute</li>
+          <li>Church-Turing incompleteness thesis</li>
+          <li>3 equivalent formal definitions of an algorithm: Church, Gödel, Turing</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Turing Machine & Turing completeness</h2>
+        <ul>
+          <li>Finite State Machines</li>
+          <li>With a tape</li>
+          <li>Turing Machine can operate on a program (another Turing Machine)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Haskell Curry</h2><img src="images/curry.png" class="avatar avatar--med">
+        <ul>
+          <li>Curry–Howard correspondence</li>
+          <li>Curry–Howard isomorphism or equivalence</li>
+          <li>proofs-as-programs and propositions- or formulae-as-types interpretation</li>
+        </ul>
+      </section>
+      <section>
+        <blockquote>
+          Under the isomorphism, types correspond
+          to propositions and members of those types, like pairs, functions and so
+          on, to proofs.
+        </blockquote><br>
+        <p><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/ttfp.pdf">Simon Thomson</a></p>
+      </section>
+      <section>
+        <h2>Writing a program within a system like Lambda-Calculus proves that it will compute.</h2>
+      </section>
+      <section>
+        <h2>Hardware evolution</h2><img src="images/computer-hardware-evolution.jpg" class="img--full"><a href="https://s-media-cache-ak0.pinimg.com/736x/a7/fd/24/a7fd245247f84d867fc9707bb6fbb430.jpg">source</a>
+      </section>
+      <section>
+        <h2>OOP vs. FP</h2>
+      </section>
+      <section><img src="images/anjana-vakil.jpg" class="avatar avatar--med"><br>
+        <blockquote>Programming Across Paradigms</blockquote><br>
+        <p><a href="https://youtu.be/Pg3UeB-5FdA">Anjana Vakil</a></p>
+      </section>
+      <section>
+        <h2>OOP like cells</h2><img src="images/cells.jpg" class="img--med">
+      </section>
+      <section>
+        <h2>FP like a factory</h2><img src="images/factory.jpg" class="img--med">
+      </section>
+      <section>
+        <h2>Programming Paradigms</h2>
+        <h3>Object Oriented</h3>
+        <ul>
+          <li>Better at context</li>
+          <li>Less reusable for new contexts</li>
+          <li>Very flexible and open</li>
+          <li>Needs to be managed with patterns</li>
+        </ul>
+        <h3>Functional</h3>
+        <ul>
+          <li>Functions are generic building blocks</li>
+          <li>Context needs to be managed</li>
+          <li>More reusable smaller chunks</li>
+          <li>More rigid, built-in patterns</li>
+        </ul>
+      </section>
+      <section>
+        <h2>OOP like a car</h2><img src="images/car.jpg" class="img--med">
+      </section>
+      <section>
+        <h2>FP like a train</h2><img src="images/train.jpg" class="img--med">
+      </section>
+      <section>
+        <h2>What options are available to us?</h2>
+      </section>
+      <section>
+        <h2>Combining more paradigms</h2><img src="images/programming-paradigms.jpg" class="img--small">
+      </section>
+      <section>
+        <h2>...or creating new paradigms</h2><img src="images/david-nolen.jpg" class="avatar"><br>
+        <blockquote>Idée Fixe</blockquote><br>
+        <p><a href="https://www.youtube.com/watch?v=lzXHMy4ewtM">David Nolen</a></p>
+      </section>
+      <section>
+        <h2>Learning to work with new Paradigms enhances our toolbox!</h2>
+      </section>
+      <section>
+        <h2>...and helps reacting to big ideas</h2><img src="images/electric-guitar.jpg" class="img--med">
+      </section>
+      <section>
+        <h2>Follow hardware innovation</h2><img src="images/evolution-of-cloud.jpg" class="img--full">
+      </section>
+      <section>
+        <h1>What will be the next game changer?</h1>
+      </section>
+      <section>
+        <h2>How will applications evolve?</h2>
+        <ul>
+          <li>Logging & Tracing (cryptic error messages)</li>
+          <li>"Lean" Application chunks instead of big frameworks (Tree-shaking)</li>
+          <li>Managing single points of failure (outsorced to the cloud)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How will Infrastructure evolve?</h2>
+        <ul>
+          <li>In a sense Infrastructure is getting more abstract</li>
+          <li>Scaling managed by the cloud</li>
+          <li>Cold starts</li>
+          <li>Startup time</li>
+          <li>etc...</li>
+        </ul>
+      </section>
+      <section>
+        <h2>What can ReasonML offer?</h2>
+      </section>
+      <section>
+        <h2>ReasonML</h2>
+        <h3>Backend</h3>
+        <ul>
+          <li>Powerful compiler</li>
+          <li>Going closer to native</li>
+          <li>MirageOS</li>
+          <li>No more need for VM (JVM, Node, etc)</li>
+          <li>Functional by default, but not "closed"</li>
+        </ul>
+        <h3>Frontend</h3>
+        <ul>
+          <li>Great adition to Javascript</li>
+          <li>Adds to the ideas of React</li>
+          <li>Lots of room to grow</li>
+        </ul>
+      </section>
+      <section>
+        <h2>btw... you don't need to be an electrical engineer to write a hit-song...</h2>
+      </section>
+      <section>
+        <h2>but it doesn't hurt to get to know your instruments better!</h2>
+      </section>
+      <section>
+        <h1>Thank you!</h1>
+        <h3><a href="https://twitter.com/ferakpeter">@ferakpeter</a></h3><img src="images/profile.png" class="avatar avatar--small">
+      </section>
+      <script src="build/build.js"></script>
+    </article>
+  </body>
+</html>
